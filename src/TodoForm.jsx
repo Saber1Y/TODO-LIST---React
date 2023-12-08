@@ -15,10 +15,10 @@ export default function TodoForm({ mainTodo }) {
   return (
     <form className="new-item-form" onSubmit={handleSubmit}>
     <div className="form-row">
-      <label htmlFor="item">New Item</label>
+      <label htmlFor="item" className="item-li">LISTED TODO'S: </label>
         <input type="text" id="text" value={newItem} onChange={(e) => {
           setNewItem(e.target.value);
-        }} />
+    }} />
     </div>
     <button className="btn">Add Todo</button>
    </form>

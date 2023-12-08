@@ -25,6 +25,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
+  margin-top: 10px;
+}
+
+.item-li {
+  margin-bottom: 10px;
+  font-size: large;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.todo-title {
+  font-size: large;
+  color: aqua;
 }
 
 .btn {
@@ -106,7 +119,7 @@ body {
   outline: 1px solid hsl(200, 100%, 50%);
 }
 
-.list li input {
+.list li input  {
   outline: none;
   width: 0;
   height: 0;
@@ -115,11 +128,17 @@ body {
   position: absolute;
 }
 
+.li--input_title {
+  color: rgb(235, 235, 245);
+  font-size: 24px;
+  font-family: 'sans-serif';
+}
+
 .list li label::before {
   content: "";
   display: block;
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 1.2rem;
+  height: 1.2rem;
   background: hsl(200, 100%, 90%);
   border-radius: 0.25em;
   display: flex;
@@ -135,7 +154,7 @@ body {
   content: "✔";
   background: hsl(200, 100%, 40%);
   color: hsl(200, 100%, 90%);
-  font-size: 0.75rem;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 

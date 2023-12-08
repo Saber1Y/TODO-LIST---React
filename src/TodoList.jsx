@@ -11,9 +11,12 @@ export default function TodoList({ todos, toggleTodo, deleteTodo }) {
             <input 
               type="checkbox" 
               checked={todo.completed} 
+              // className='todo-title'
               onChange={(e) => toggleTodo(todo.id, e.target.checked)}
             />
+            <div className='li--input_title'>
             {todo.title}
+            </div>
           </label>
           <button className="btn btn-danger" onClick={() => deleteTodo(todo.id)}>Delete</button> 
         </li>

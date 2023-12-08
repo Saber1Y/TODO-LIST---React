@@ -15,6 +15,7 @@ export default function App() {
     })
   }
 
+
   function toggleTodo(id, completed) {
     setTodos(currentTodos => {
       return currentTodos.map(todo => {
@@ -28,7 +29,7 @@ export default function App() {
 
   function deleteTodo(id) {
     setTodos(currentTodos => {
-      return currentTodos.filter(todo => todo.id !== id)
+      return currentTodos.filter(todo => todo.id !== id);
     })
   }
 
