@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import '/App.scss';
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
-import DeleteTodo from "./DeleteTodo";
+// import DeleteTodo from "./DeleteTodo";
+// import ToggleTodo from "../ToggleTodo";
 
 
 
@@ -16,25 +17,23 @@ export default function App() {
         { id: crypto.randomUUID(), title, completed: false },
       ]
     })
+  }   
+  function toggleTodo(id, completed) {
+    setTodos(currentTodos => {
+      return currentTodos.map(todo => {
+        if (todo.id === id) {
+          return { ...todo, completed }
+        }
+        return todo
+      })
+    })
   }
 
-
-  // function toggleTodo(id, completed) {
-  //   setTodos(currentTodos => {
-  //     return currentTodos.map(todo => {
-  //       if (todo.id === id) {
-  //         return { ...todo, completed }
-  //       }
-  //       return todo
-  //     })
-  //   })
-  // }
-
-  // function deleteTodo(id) {
-  //   setTodos(currentTodos => {
-  //     return currentTodos.filter(todo => todo.id !== id);
-  //   })
-  // }
+  function deleteTodo(id) {
+    setTodos(currentTodos => {
+      return currentTodos.filter(todo => todo.id !== id);
+    })
+  }
 
   return (
     <>
