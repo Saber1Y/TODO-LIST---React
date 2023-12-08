@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import '/App.scss';
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
+import DeleteTodo from "./DeleteTodo";
+
+
 
 export default function App() {
   const [todos, setTodos] = useState([]);

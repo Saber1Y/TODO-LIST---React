@@ -1,11 +1,15 @@
-// import React, { useState } from 'react'
+import React from "react";
 
-// export default function deleteTodo(id) {
-//     const [todos, setTodos] = useState([]);
-    
-//     return (
-//         setTodos(currentTodos => {
-//           return currentTodos.filter(todo => todo.id !== id);
-//         })
-//     )
-//   }
+function DeleteTodo({ id, deleteTodo }) {
+  const handleDelete = () => {
+    deleteTodo(id);
+  };
+
+  return (
+    <div>
+      <button onClick={handleDelete}>Delete</button>
+    </div>
+  );
+}
+
+export default DeleteTodo;
